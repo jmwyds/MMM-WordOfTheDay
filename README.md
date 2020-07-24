@@ -1,9 +1,5 @@
 # MMM-MWWordOfTheDay
-Magic Mirror Module to show the Word of the day from Merriam Webster's dictionary
-
-![WOTD](wotd.png)
-
-
+Magic Mirror Module to show the Word of the Day from Merriam Webster's dictionary
 
 # Installation
 `cd modules` -> `git clone https://github.com/jmwyds/MMM-WordOfTheDay.git`
