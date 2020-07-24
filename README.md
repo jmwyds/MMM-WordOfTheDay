@@ -6,7 +6,11 @@ Magic Mirror Module to show the Word of the Day from Merriam Webster's dictionar
 
 
 # Installation
-`cd modules` -> `git clone https://github.com/jmwyds/MMM-WordOfTheDay.git`
+```
+cd ~/MagicMirror/modules
+git clone https://github.com/jmwyds/MMM-WordOfTheDay.git
+npm install
+```
 
 ## Add to config:
 ```
@@ -18,5 +22,5 @@ config: {
 }
 ```
 
-# Thanks To:
+### Thanks To:
 This module is based off of a module written by @Bittiez. Thank you.
