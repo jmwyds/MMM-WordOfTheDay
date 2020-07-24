@@ -10,11 +10,11 @@ Magic Mirror Module to show the Word of the Day from Merriam Webster's dictionar
 
 ## Add to config:
 ```
-module: 'MMM-MWWordOfTheDay',
+module: 'MMM-WordOfTheDay',
 position: 'top_right',
 config: {
 	updateInterval: 120000,
-	headerText: "Word of the day"
+	headerText: "Word of the Day"
 }
 ```
 
