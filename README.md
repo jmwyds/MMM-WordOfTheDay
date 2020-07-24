@@ -3,6 +3,7 @@ Magic Mirror Module to show the Word of the Day from Merriam Webster's dictionar
 
 # Screenshot
 ![Image of Word of the Day Module]
+(wotdPic.png)
 
 
 # Installation
