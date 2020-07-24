@@ -1,5 +1,5 @@
 # MMM-WordOfTheDay
-Magic Mirror Module to show the Word of the Day from Merriam Webster's dictionary
+Magic Mirror Module to show the Word of the Day from Merriam Webster's dictionary. This module does NOT require the user to enter any external API keys or secrets. The status of this project is WIP nearing completion. It is a fairly simple module, but I am still working through some edge cases. Enjoy!
 
 # Screenshot
 ![Image of Word of the Day Module](wotdPic.png)
