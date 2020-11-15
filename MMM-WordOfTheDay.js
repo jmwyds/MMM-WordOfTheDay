@@ -8,14 +8,9 @@ Module.register("MMM-WordOfTheDay",{
 	requiresVersion: "2.1.0",
 
 	start: function() {
-		var self = this;
 		var dataNotification = null;
-
-		// Schedule update timer.
-		this.getData();
-		setInterval(function() {
-			self.updateDom();
-		}, this.config.updateInterval);
+		this.update(this);
+		this.scheduleUpdate(-1);
 	},
 	
 	getScripts: function() {
@@ -30,9 +25,9 @@ Module.register("MMM-WordOfTheDay",{
 		]
 	},
 	
-	getData: function() {
-		var self = this;
-		this.sendSocketNotification("MMM-WordOfTheDay-DATA_CHANGE", null);
+	update: function(self) {
+		self.sendSocketNotification("MMM-WordOfTheDay-DATA_CHANGE", null);
+		self.updateDom();
 	},
 	
 	scheduleUpdate: function(delay) {
@@ -40,10 +35,9 @@ Module.register("MMM-WordOfTheDay",{
 		if (typeof delay !== "undefined" && delay >= 0) {
 			nextLoad = delay;
 		}
-		nextLoad = nextLoad ;
 		var self = this;
-		setTimeout(function() {
-			self.getData();
+		setInterval(function() {
+			self.update(self);
 		}, nextLoad);
 	},
 
