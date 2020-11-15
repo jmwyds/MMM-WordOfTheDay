@@ -28,6 +28,4 @@ config: {
 
 ### Thanks To:
 This module is based off of a module written by @Bittiez. Thank you.
-
-### Known Issue:
-The update interval isn't working properly and I don't have a surplus of time to fix it right now. If you are a developer and know how to properly fix it, please submit a merge request with the proper code. Thanks!
+Thank you to @volkyl for assisting with the update intervals.
