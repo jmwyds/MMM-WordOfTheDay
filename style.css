@@ -1,22 +1,25 @@
 .wotd-header {
-	margin-bottom: 5px;
+  margin-bottom: 5px;
 }
+
 .wotd-title {
-	font-size: 1em;
-	line-height:0.75;
-	padding-top: 5px;
+  font-size: 1em;
+  line-height: 0.75;
+  padding-top: 5px;
 }
-.wotd-summary, .wotd-examples {
-	font-size: 0.5em;
-	line-height:1.1;
-	display: block;
-	width: 300px;
-	padding-bottom:10px;
-	padding-top:10px;
+
+.wotd-summary,
+.wotd-examples {
+  font-size: 0.5em;
+  line-height: 1.1;
+  display: block;
+  width: 300px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .wotd-type {
-	line-height: 1;
-	font-size: 0.75em;
-	padding-bottom: 10px;
+  line-height: 1;
+  font-size: 0.75em;
+  padding-bottom: 10px;
 }
