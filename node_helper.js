@@ -1,42 +1,45 @@
-/* Magic Mirror
+/*
+ * MagicMirror²
  * Node Helper: MMM-WordOfTheDay
  *
  * By jmwyds
  * MIT Licensed.
  */
 
-var NodeHelper = require("node_helper");
-var request = require('request');
-
+const Log = require("logger");
+const NodeHelper = require("node_helper");
+const Parser = require("rss-parser");
 
 module.exports = NodeHelper.create({
 
-	// Override socketNotificationReceived method.
+  // Override socketNotificationReceived method.
 
-	/* socketNotificationReceived(notification, payload)
-	 * This method is called when a socket notification arrives.
-	 *
-	 * argument notification string - The identifier of the noitication.
-	 * argument payload mixed - The payload of the notification.
-	 */
-	socketNotificationReceived: function(notification, payload) {
-		var self = this;
-		if (notification === "MMM-WordOfTheDay-DATA_CHANGE") {
-			var urlApi = "https://www.merriam-webster.com/wotd/feed/rss2";
-			
-			request({ url: urlApi, method: 'GET' }, function (error, response, body) {
-				if (!error && response.statusCode == 200) {
-					var result = body;
-					self.sendNotificationUpdate(result);
-				} else if (error) {
-					console.log(error);
-				}
-			});
-		}
-	},
+  /*
+   * socketNotificationReceived(notification, payload)
+   * This method is called when a socket notification arrives.
+   *
+   * argument notification string - The identifier of the noitication.
+   * argument payload mixed - The payload of the notification.
+   */
+  async socketNotificationReceived (notification) {
+    const self = this;
+    if (notification === "MMM-WordOfTheDay-DATA_CHANGE") {
+      const urlApi = "https://www.merriam-webster.com/wotd/feed/rss2";
 
-	// Example function send notification test
-	sendNotificationUpdate: function(payload) {
-		this.sendSocketNotification("MMM-WordOfTheDay-DATA_CHANGE", payload);
-	},
+      try {
+        const parser = new Parser();
+        const feed = await parser.parseURL(urlApi);
+        const firstItem = feed.items[0];
+        Log.debug(`### item: ${firstItem.title}:${firstItem.link}`);
+        self.sendNotificationUpdate(firstItem);
+      } catch (error) {
+        Log.error(error);
+      }
+    }
+  },
+
+  // Example function send notification test
+  sendNotificationUpdate (payload) {
+    this.sendSocketNotification("MMM-WordOfTheDay-DATA_CHANGE", payload);
+  }
 });
