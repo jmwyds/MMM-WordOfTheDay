@@ -16,7 +16,7 @@ Enjoy the module :)
 
 ```bash
 cd ~/MagicMirror/modules
-git clone https://github.com/jmwyds/MMM-WordOfTheDay.git
+git clone https://github.com/jmwyds/MMM-WordOfTheDay
 cd MMM-WordOfTheDay
 npm install
 ```
