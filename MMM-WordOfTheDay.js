@@ -84,14 +84,12 @@ Module.register("MMM-WordOfTheDay", {
       exampleSpan.setAttribute("class", "wotd-examples");
       wrapper.append(exampleSpan);
 
-      if (config.logLevel.includes("DEBUG")) {
-        Log.debug("### this.dataNotification:");
-        Log.debug(this.dataNotification);
-        Log.debug(`### summary: ${summary}`);
-        Log.debug(`### word: ${word}`);
-        Log.debug(`### definition: ${definition}`);
-        Log.debug(`### typeString: ${typeString}`);
-      }
+      Log.debug("### this.dataNotification:");
+      Log.debug(this.dataNotification);
+      Log.debug(`### summary: ${summary}`);
+      Log.debug(`### word: ${word}`);
+      Log.debug(`### definition: ${definition}`);
+      Log.debug(`### typeString: ${typeString}`);
     }
 
     return wrapper;
