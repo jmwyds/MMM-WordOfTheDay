@@ -41,3 +41,7 @@ This module is based off of a module written by @Bittiez. Thank you.
 Thank you to @volkyl for assisting with the update intervals.
 
 Thanks to @KristjanESPERANTO for a variety of improvements to the module.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
