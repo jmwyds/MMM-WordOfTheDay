@@ -38,7 +38,6 @@ module.exports = NodeHelper.create({
     }
   },
 
-  // Example function send notification test
   sendNotificationUpdate (payload) {
     this.sendSocketNotification("MMM-WordOfTheDay-DATA_CHANGE", payload);
   }

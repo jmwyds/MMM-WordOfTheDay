@@ -16,7 +16,7 @@ Enjoy the module :)
 
 ```bash
 cd ~/MagicMirror/modules
-git clone https://github.com/jmwyds/MMM-WordOfTheDay.git
+git clone https://github.com/jmwyds/MMM-WordOfTheDay
 cd MMM-WordOfTheDay
 npm install
 ```
@@ -28,7 +28,7 @@ npm install
   module: 'MMM-WordOfTheDay',
   position: 'top_left',
   config: {
-    headerText: "Word of the Day"
+    headerText: "Word of the Day",
     updateInterval: 10 * 60 * 1000, // 10 minutes
   }
 },
@@ -41,3 +41,7 @@ This module is based off of a module written by @Bittiez. Thank you.
 Thank you to @volkyl for assisting with the update intervals.
 
 Thanks to @KristjanESPERANTO for a variety of improvements to the module.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
