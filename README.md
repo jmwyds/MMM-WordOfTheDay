@@ -28,7 +28,7 @@ npm install
   module: 'MMM-WordOfTheDay',
   position: 'top_left',
   config: {
-    headerText: "Word of the Day"
+    headerText: "Word of the Day",
     updateInterval: 10 * 60 * 1000, // 10 minutes
   }
 },
